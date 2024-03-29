@@ -63,3 +63,5 @@ pipe.client
 pipe.server
 tests/expected_outputs
 fen.txt
+*.log
+
