@@ -39,6 +39,13 @@ int main() {
         // Fill this in
     }
 
+    // Please ensure that the following lines of code execute just before your program terminates.
+    // If necessary, copy and paste it to other parts of your code where you terminate your program.
+    FILE *temp = fopen("./fen.txt", "w");
+    char fen[200];
+    chessboard_to_fen(fen, &game);
+    fprintf(temp, "%s", fen);
+    fclose(temp);
     close(connfd);
     return 0;
 }
