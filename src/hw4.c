@@ -72,9 +72,9 @@ bool is_valid_move(char piece, int src_row, int src_col, int dest_row, int dest_
     return false;
 }
 
-void fen_to_chessboard(const char *fen, ChessGame *chess_game) {
+void fen_to_chessboard(const char *fen, ChessGame *game) {
     (void)fen;
-    (void)chess_game;
+    (void)game;
 }
 
 int parse_move(const char *move, ChessMove *parsed_move) {
