@@ -5,7 +5,7 @@ extern "C" {
 #include "hw4.h"
 }
 
-void fen_to_chessboard_soln(const char *fen, ChessGame *chess_game);
+void fen_to_chessboard_soln(const char *fen, ChessGame *game);
 
 class is_valid_TestSuite : public testing::Test { 
     void SetUp() override {

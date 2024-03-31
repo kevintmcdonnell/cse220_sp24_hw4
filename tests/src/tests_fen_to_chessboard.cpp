@@ -6,7 +6,7 @@ extern "C" {
 }
 
 void initialize_game_soln(ChessGame *game);
-void fen_to_chessboard_soln(const char *fen, ChessGame *chess_game);
+void fen_to_chessboard_soln(const char *fen, ChessGame *game);
 
 class fen_to_chessboard_TestSuite : public testing::Test { 
 };

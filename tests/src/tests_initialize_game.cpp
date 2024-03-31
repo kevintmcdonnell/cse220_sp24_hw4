@@ -12,8 +12,21 @@ class initialization_testSuite : public testing::Test {
 
 TEST_F(initialization_testSuite, initialization) {
     ChessGame game;
-    //memset(&game, 0xFF, sizeof(ChessGame));
+
+    // fill fields with garbage
+    game.moveCount = 21323123;
+    game.capturedCount = 123123;
+    game.currentPlayer = 123123;
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            game.chessboard[i][j] = 'X';
+        }
+    }
+
+    
     initialize_game(&game);
+
     
     EXPECT_EQ(game.moveCount, 0);
     EXPECT_EQ(game.capturedCount, 0);

@@ -8,7 +8,7 @@ extern "C" {
 int make_move_soln(ChessGame *game, ChessMove *move, bool is_client, bool validate_move);
 void generate_solution_file(const std::string& test_name, const std::string& solution_content);
 void initialize_game_soln(ChessGame *game);
-void fen_to_chessboard_soln(const char *fen, ChessGame *chess_game);
+void fen_to_chessboard_soln(const char *fen, ChessGame *game);
 int receive_command_soln(ChessGame *game, const char *message, int socketfd, bool is_client);
 
 class send_receive_TestSuite : public testing::Test { 
