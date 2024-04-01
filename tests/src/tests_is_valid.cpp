@@ -16,7 +16,7 @@ TEST_F(is_valid_TestSuite, is_valid_pawn_move_white) {
     INFO("Check if a pawn move is valid. It is white's turn.");
     ChessGame game;
     initialize_game(&game);
-    // https://lichess.org/editor/r1bqk1nr/pp1nbppp/2pp4/4N3/2BPP3/2N5/PPP2PPP/R1BQK2R_w_KQkq_-_0_1?color=white
+    // https://lichess.org/editor/r1bqk1nr/pp1nbppp/2pp4/4p3/2BPP3/2N2N2/PPP2PPP/R1BQK2R_w_KQkq_-_0_1?color=white
     fen_to_chessboard_soln("r1bqk1nr/pp1nbppp/2pp4/4p3/2BPP3/2N2N2/PPP2PPP/R1BQK2R w", &game);
     EXPECT_EQ(true, is_valid_pawn_move('P', 6, 6, 4, 6, &game)) ; // valid movement
     EXPECT_EQ(true, is_valid_pawn_move('P', 6, 1, 5, 1, &game)) ; // valid movement
