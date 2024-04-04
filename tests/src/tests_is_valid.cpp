@@ -37,7 +37,7 @@ TEST_F(is_valid_TestSuite, is_valid_pawn_move_black) {
     EXPECT_EQ(true, is_valid_pawn_move('p', 1, 7, 3, 7, &game)) ; // valid movement
     EXPECT_EQ(true, is_valid_pawn_move('p', 1, 7, 2, 7, &game)) ; // valid movement
     EXPECT_EQ(true, is_valid_pawn_move('p', 2, 3, 3, 3, &game)) ; // valid movement
-    EXPECT_EQ(true, is_valid_pawn_move('p', 3, 4, 4, 3, &game)) ; // valid movement - capture
+    EXPECT_EQ(true, is_valid_pawn_move('p', 2, 3, 3, 4, &game)) ; // valid movement - capture
     EXPECT_EQ(false, is_valid_pawn_move('p', 3, 4, 4, 4, &game)) ; // invalid movement
     EXPECT_EQ(false, is_valid_pawn_move('p', 2, 2, 1, 2, &game)) ; // invalid movement backwards
 }
