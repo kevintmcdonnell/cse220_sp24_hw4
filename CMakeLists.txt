@@ -12,11 +12,7 @@ option(BUILD_CODEGRADE_TESTS "Build test suites into separate executables" OFF)
 include_directories(include)
 link_directories(lib)
 
-# Build the main executable
-add_executable(hw4_client src/hw4_client.c src/hw4.c)
-add_executable(hw4_server src/hw4_server.c src/hw4.c)
-
-# Build executables for solution we will distribute to the students. We should obfuscate the helper function names.
+# Build executables
 add_executable(hw4_client src/hw4_client.c src/hw4.c)
 add_executable(hw4_server src/hw4_server.c src/hw4.c)
 target_compile_options(hw4_client PUBLIC -O3)
