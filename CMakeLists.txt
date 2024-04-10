@@ -16,6 +16,12 @@ link_directories(lib)
 add_executable(hw4_client src/hw4_client.c src/hw4.c)
 add_executable(hw4_server src/hw4_server.c src/hw4.c)
 
+# Build executables for solution we will distribute to the students. We should obfuscate the helper function names.
+add_executable(hw4_client_soln src/hw4_client.c src/hw4.c)
+add_executable(hw4_server_soln src/hw4_server.c src/hw4.c)
+target_compile_options(hw4_client_soln PUBLIC -O3)
+target_compile_options(hw4_server_soln PUBLIC -O3)
+
 # Build executables
 target_compile_options(hw4_client PUBLIC -g -Wall -Wextra -Wshadow -Wpedantic -Wdouble-promotion -Wformat=2 -Wundef -Werror)
 target_compile_options(hw4_server PUBLIC -g -Wall -Wextra -Wshadow -Wpedantic -Wdouble-promotion -Wformat=2 -Wundef -Werror)
