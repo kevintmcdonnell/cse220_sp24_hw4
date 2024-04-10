@@ -12,11 +12,9 @@ option(BUILD_CODEGRADE_TESTS "Build test suites into separate executables" OFF)
 include_directories(include)
 link_directories(lib)
 
-# Build executables
+# Build the main executable
 add_executable(hw4_client src/hw4_client.c src/hw4.c)
 add_executable(hw4_server src/hw4_server.c src/hw4.c)
-target_compile_options(hw4_client PUBLIC -O3)
-target_compile_options(hw4_server PUBLIC -O3)
 
 # Build executables
 target_compile_options(hw4_client PUBLIC -g -Wall -Wextra -Wshadow -Wpedantic -Wdouble-promotion -Wformat=2 -Wundef -Werror)
@@ -44,4 +42,3 @@ else()
     target_link_options(run_tests PRIVATE -no-pie)
     target_link_libraries(run_tests PUBLIC gtest gtest_main pthread m hw4_lib)
 endif()
-

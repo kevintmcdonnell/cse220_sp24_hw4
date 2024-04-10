@@ -69,7 +69,7 @@ bool run_simulation01() {
             abort();
         }
         INFO("Attempting to start client...");
-        execl("./build/hw4_client_soln", "hw4_client_soln", NULL);
+        execl("./hw4_client_soln", "hw4_client_soln", NULL);
         fprintf(stderr, "Failed to exec client\n");
         abort();
     }
@@ -160,7 +160,7 @@ bool run_simulation02() {
             abort();
         }
         INFO("Attempting to start client...");
-        execl("./build/hw4_client_soln", "hw4_client_soln", NULL);
+        execl("./hw4_client_soln", "hw4_client_soln", NULL);
         fprintf(stderr, "Failed to exec client\n");
         abort();
     }
@@ -284,7 +284,7 @@ bool run_simulation03() {
             abort();
         }
         INFO("Attempting to start client...");
-        execl("./build/hw4_client_soln", "hw4_client_soln", NULL);
+        execl("./hw4_client_soln", "hw4_client_soln", NULL);
         fprintf(stderr, "Failed to exec client\n");
         abort();
     }
